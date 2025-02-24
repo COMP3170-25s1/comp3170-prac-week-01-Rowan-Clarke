@@ -66,8 +66,11 @@ public class Scene {
 		shader.setAttribute("a_position", vertexBuffer);
 		
 		// write the colour value into the u_colour uniform. For now, we will write colours as Vec3s (R,G,B).
-		Vector3f colour = new Vector3f(1.0f, 0.0f, 0.f); // RED
+		Vector3f colour = new Vector3f(0.0f, 1.0f, 0.75f); // Awesome Blue
 		shader.setUniform("u_colour", colour);
+		
+		//Vector3f colour2 = new Vector3f(1.0f, 1.0f, 0.55f); // Awesome Blue
+		//shader.setUniform("u_colour2", colour);
 		
 		Vector2f screenSize = new Vector2f(screenWidth, screenHeight);
 		shader.setUniform("u_screenSize", screenSize);
